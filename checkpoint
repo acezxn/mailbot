@@ -1,0 +1,2 @@
+model_checkpoint_path: "/Users/daniel/Desktop/mailbot/mail.h5"
+all_model_checkpoint_paths: "/Users/daniel/Desktop/mailbot/mail.h5"
