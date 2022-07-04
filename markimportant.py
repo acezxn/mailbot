@@ -10,7 +10,7 @@ parser.add_argument("--password")
 
 args = parser.parse_args()
 
-mails = mail.read_email_from_gmail(args.user, args.password, 'ALL')
+mails = mail.read_email_from_gmail(args.mail, args.password, 'ALL')
 # print(mails)
 with open(args.model) as file:
     data = json.load(file)

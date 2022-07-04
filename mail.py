@@ -13,7 +13,7 @@ def decode_mime_words(s):
 def read_email_from_gmail(user, password, mode):
     mails = []
 
-    mail = imaplib.IMAP4_SSL(imap_url)
+    mail = imaplib.IMAP4_SSL("imap.gmail.com")
     mail.login(user, password)
     try:
 

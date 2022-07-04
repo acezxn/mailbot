@@ -1,12 +1,15 @@
 import argparse
+import configparser
 
 
 parser = argparse.ArgumentParser()
+cfgParser = configparser.ConfigParser()
 parser.add_argument("--model")
-parser.add_argument("--mail")
-parser.add_argument("--password")
+parser.add_argument("--config")
 parser.add_argument("--train", default=False, action='store_true')
 args = parser.parse_args()
+
+cfgParser.read(args.config)
 
 import nltk
 from nltk.stem.lancaster import LancasterStemmer
@@ -149,7 +152,7 @@ banner = """
 
 old = []
 while True:
-    mails = mail.read_email_from_gmail(args.user, args.password, 'UnSeen')
+    mails = mail.read_email_from_gmail(cfgParser.get("config", "mail"), cfgParser.get("config", "password"), 'UnSeen')
     os.system("clear")
     print(banner)
     if len(old) == 0:
