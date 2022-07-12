@@ -2,6 +2,8 @@
 
 python scripts to inform the user if important emails arrive
 
+![scraper](https://user-images.githubusercontent.com/14313049/178398543-81e70b2b-408e-4999-a347-feb4d2dc23bd.png)
+
 ## Parameters
 
 - model: json file used for training, can be found in the models directory
